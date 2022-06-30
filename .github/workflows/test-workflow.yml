@@ -15,3 +15,16 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: create build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: build-artifact.txt
+  Consumer-of-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
+      - run: cat build.artifact.txt
