@@ -28,3 +28,5 @@ jobs:
         with:
           name: my-artifact
       - run: cat build-artifact.txt
+  Child-workflow-artifact-test:
+    uses: "./.github/workflows/child-workflow.yml"
