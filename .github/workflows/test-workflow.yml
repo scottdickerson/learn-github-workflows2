@@ -21,6 +21,7 @@ jobs:
           name: my-artifact
           path: build-artifact.txt
   Consumer-of-artifact:
+    needs: [Explore-GitHub-Actions]
     runs-on: ubuntu-latest
     steps:
       - name: download-artifact
@@ -29,6 +30,8 @@ jobs:
           name: my-artifact
       - run: cat build-artifact.txt
   Child-workflow-artifact-test:
+    needs: [Explore-GitHub-Actions]
     uses: "./.github/workflows/child-workflow.yml"
   Child-workflow-artifact-test2:
+    needs: [Explore-GitHub-Actions]
     uses: "./.github/workflows/child-workflow2.yml"
