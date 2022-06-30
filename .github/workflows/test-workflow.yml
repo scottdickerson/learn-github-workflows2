@@ -33,5 +33,5 @@ jobs:
     needs: [Explore-GitHub-Actions]
     uses: "./.github/workflows/child-workflow.yml"
   Child-workflow-artifact-test2:
-    needs: [Explore-GitHub-Actions]
+    needs: [Explore-GitHub-Actions, Child-workflow-artifact-test]
     uses: "./.github/workflows/child-workflow2.yml"

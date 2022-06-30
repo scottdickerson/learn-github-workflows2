@@ -9,6 +9,8 @@ jobs:
         with:
           name: my-artifact
       - run: cat build-artifact.txt
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: upload-artifact
         uses: actions/upload-artifact@v3
         with:
