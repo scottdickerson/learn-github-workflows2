@@ -7,10 +7,5 @@ jobs:
       - name: download-artifact
         uses: actions/download-artifact@v3
         with:
-          name: my-artifact
-      - run: cat build-artifact.txt
-      - name: upload-artifact
-        uses: actions/upload-artifact@v3
-        with:
           name: child-artifact
-          path: child-workflow-artifact.txt
+      - run: cat child-workflow-artifact.txt
