@@ -27,4 +27,4 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: my-artifact
-      - run: cat build.artifact.txt
+      - run: cat build-artifact.txt
