@@ -1,0 +1,8 @@
+name: GitHub Dispatched workflow
+on: [workflow_call]
+jobs:
+  download-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download-artifact
+        run: echo "My Workflow was Dispatched"
